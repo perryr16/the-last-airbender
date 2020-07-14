@@ -9,17 +9,8 @@ class AirbenderService
     JSON.parse(response.body, symbolize_names: true)
   end
 
-  def characters_by_nation(nation)
-    count = total_characters_by(nation)
+  def characters_by_nation(nation, count)
     get_characters("?affiliation=#{nation}&perPage=#{count}")
-  end
-
-  def total_characters_by(nation)
-    nation = nation.sub('+', ' ')
-    nation_characters = get_all_characters.find_all do |character| 
-      character[:affiliation].downcase.include?(nation) if character[:affiliation]
-    end
-    count = nation_characters.count 
   end
 
   def get_all_characters 
