@@ -11,8 +11,8 @@ describe "Airbender API" do
     expect(current_path).to eq('/search')
 
     expect(page).to have_content("Members of the Fire Nation")
-    expect(page).to have_content("Count: 20")
-    expect(page).to have_css('.character', count: 20)
+    expect(page).to have_content("Count: 97")
+    expect(page).to have_css('.character', count: 97)
 
     within(first(".character"))do 
       expect(page).to have_css('.name')
