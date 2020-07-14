@@ -1,4 +1,4 @@
-class Character 
+class Character
 
   attr_reader :allies,
               :enemies,
