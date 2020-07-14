@@ -21,10 +21,5 @@ class Character
   def enemies_list 
     @enemies.join(", ")
   end
-
-  def affiliation_list 
-    @affiliation if @affiliation.is_a?(String)
-    @affiliation.join(", ") if @affiliation.is_a?(Array)
-  end
   
 end

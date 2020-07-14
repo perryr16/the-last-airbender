@@ -13,7 +13,7 @@ describe "Airbender API" do
     expect(page).to have_content("Members of the Fire Nation")
     expect(page).to have_content("Count: 20")
     save_and_open_page
-binding.pry
+
     character0 = Character.all[0]
     character1 = Character.all[1]
 
