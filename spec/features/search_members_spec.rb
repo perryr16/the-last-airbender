@@ -12,6 +12,7 @@ describe "Airbender API" do
 
     expect(page).to have_content("Members of the Fire Nation")
     expect(page).to have_content("Count: 97")
+
     expect(page).to have_css('.character', count: 97)
 
     within(first(".character"))do 
@@ -21,7 +22,7 @@ describe "Airbender API" do
       expect(page).to have_css('.enemies')
       expect(page).to have_css('.affiliation')
     end
-
+    save_and_open_page
     
   end
   
