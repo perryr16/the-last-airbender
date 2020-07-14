@@ -13,5 +13,13 @@ class Character
     @name = attributes[:name]
     @affiliation = attributes[:affiliation]
   end
+
+  def allies_list 
+    @allies.join(", ")
+  end
+
+  def enemies_list 
+    @enemies.join(", ")
+  end
   
 end

@@ -10,7 +10,7 @@ describe "Airbender API" do
 
     expect(current_path).to eq('/search')
 
-    expect(page).to have
+    save_and_open_page
 
     
   end
