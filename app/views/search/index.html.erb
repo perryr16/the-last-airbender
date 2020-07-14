@@ -1,12 +1,12 @@
 <h1>Members of the <%=@characters.first.affiliation %></h1>
 <p>Count: <%=@characters.length  %></p>
 <%@characters.each do |character| %>
-  <section class="character">
+  <section id="character-<%=character.name%>">
     <h3><%=character.name %></h3>
     <img class="character-image" src="<%= character.photo_url %>" alt="<%= character.name %> image"> <p>
     <p>Allies: <%=character.allies_list %></p>
     <p>Enemies: <%=character.enemies_list %></p>
-    <p>Affiliation: <%=character.affiliation %></p>
+    <p>Affiliation: <%=character.affiliation_list %></p>
   </section>
   
 <%end %>

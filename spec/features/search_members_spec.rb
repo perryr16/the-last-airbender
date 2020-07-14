@@ -10,7 +10,20 @@ describe "Airbender API" do
 
     expect(current_path).to eq('/search')
 
+    expect(page).to have_content("Members of the Fire Nation")
+    expect(page).to have_content("Count: 20")
     save_and_open_page
+binding.pry
+    character0 = Character.all[0]
+    character1 = Character.all[1]
+
+    within("#character-#{character0.name}")do 
+      expect(page).to have_content(character_0.name)
+      expect(page).to have_content(character_0.allies_list)
+      expect(page).to have_content(character_0.enemies_list)
+      expect(page).to have_content(character_0.affiliation_list)
+
+    end
 
     
   end
