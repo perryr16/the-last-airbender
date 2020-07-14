@@ -1,7 +1,7 @@
 class SearchController < ApplicationController
 
   def index
-    binding.pry
+    AirbenderResults.new.characters(params)
   end
   
 

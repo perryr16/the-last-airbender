@@ -8,6 +8,10 @@ describe "Airbender API" do
     select('Fire Nation', from: :nation)
     click_on "Search For Members"
 
+    expect(current_path).to eq('/search')
+
+    expect(page).to have
+
     
   end
   
