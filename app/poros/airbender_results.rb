@@ -6,8 +6,10 @@ class AirbenderResults
   
   def characters(params)
     nation = params[:nation].sub('_','+')
-    characters = service.characters_by_nation(nation)
-    binding.pry
+    characters_details = service.characters_by_nation(nation)
+    @characters = characters_details.map do |details| 
+      Character.new(details)
+    end
   end
 
 end
